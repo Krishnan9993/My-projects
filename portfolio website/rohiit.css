@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0d0d0d;
+  color: white;
+  overflow-x: hidden;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #111;
+}
+.logo {
+  font-size: 24px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.nav-links a.active,
+.nav-links a:hover {
+  border-bottom: 2px solid red;
+}
+.theme-toggle {
+  font-size: 20px;
+}
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+  min-height: 90vh;
+  background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png'); /* optional */
+}
+.hero-text h1 {
+  font-size: 48px;
+  line-height: 1.4;
+}
+.hero-text span {
+  color: red;
+}
+.contact-btn {
+  margin-top: 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.social-icons {
+  margin-top: 30px;
+}
+.social-icons a {
+  color: white;
+  margin-right: 20px;
+  font-size: 22px;
+}
+.hero-image img {
+  width: 320px;
+  border-radius: 20px;
+  object-fit: cover;
+}

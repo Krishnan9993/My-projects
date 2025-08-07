@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Secret Admirer ❤️</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+        h1 {
+            color: red;
+            font-size: 3em;
+        }
+        #revealBtn {
+            padding: 15px 30px;
+            font-size: 1.5em;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        #message {
+            margin-top: 50px;
+            font-size: 2em;
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Someone has a secret crush on you 😍</h1>
+    <button id="revealBtn">Click to Reveal</button>
+    <div id="message"></div>
+
+    <script>
+        const button = document.getElementById('revealBtn');
+        const messageDiv = document.getElementById('message');
+
+        button.addEventListener('click', () => {
+            messageDiv.innerHTML = 'Loading your secret admirer\'s message...';
+            button.style.display = 'none';
+
+            setTimeout(() => {
+                messageDiv.innerHTML = 'It\'s just a prank 🤣 Gotcha, Kajal Kumari!';
+            }, 3000); // 3 second delay
+        });
+    </script>
+
+</body>
+</html>

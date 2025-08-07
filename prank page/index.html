@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Loading...</title>
+<style>
+    body {
+        background-color: black;
+        color: lime;
+        font-family: "Courier New", monospace;
+        font-size: 18px;
+        white-space: pre;
+        padding: 20px;
+        overflow: hidden;
+    }
+    #main {
+        display: block;
+        animation: scan 0.3s infinite alternate;
+    }
+    @keyframes scan {
+        from { opacity: 1; }
+        to { opacity: 0.7; }
+    }
+    #alert, #final {
+        display: none;
+        text-align: center;
+        padding-top: 100px;
+    }
+    #alert {
+        background-color: red;
+        color: white;
+        font-size: 30px;
+    }
+    #final {
+        background-color: pink;
+        color: red;
+        font-size: 35px;
+    }
+    #restartBtn {
+        margin-top: 30px;
+        padding: 15px 25px;
+        font-size: 20px;
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body onclick="openFullscreen();">
+
+<!-- Hidden audio for scary sound -->
+<audio id="scarySound">
+    <source src="https://www.soundjay.com/button/beep-10.mp3" type="audio/mpeg">
+</audio>
+
+<div id="main">Initializing system...
+Loading files...
+Bypassing firewall...
+Accessing secure data...
+Injecting virus...
+Scanning your device...
+Deleting system32...
+Encrypting your data...
+Running love_protocol.exe...
+Analyzing feelings...
+</div>
+
+<div id="alert">⚠️ YOUR DEVICE HAS BEEN HACKED! ⚠️</div>
+
+<div id="final">
+    ❤️ JUST KIDDING! <br> It's your secret admirer 😍
+    <br><br>
+    <button id="restartBtn" onclick="restartPrank()">Prank Again</button>
+</div>
+<P>
+        <p>
+    <a href="prank.html" style="
+        display: inline-block;
+        padding: 15px 30px;
+        font-size: 22px;
+        background-color: #00ccff;
+        color: white;
+        text-decoration: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        transition: background-color 0.3s, transform 0.2s;
+    " onmouseover="this.style.backgroundColor='#0099cc'; this.style.transform='scale(1.05)';"
+      onmouseout="this.style.backgroundColor='#00ccff'; this.style.transform='scale(1)';">
+        🔓 Click Here to Unhack Your Device
+    </a>
+</p>
+
+</P>
+
+<script>
+    // Vibrate the device
+    function vibratePhone() {
+        if (navigator.vibrate) {
+            navigator.vibrate([500, 300, 500, 300, 500]);  // Vibration pattern
+        }
+    }
+
+    // Open in fullscreen
+    function openFullscreen() {
+        let elem = document.documentElement;
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) {
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+            elem.msRequestFullscreen();
+        }
+    }
+
+    // Start scary sound and vibration
+    function playScare() {
+        document.getElementById('scarySound').play().catch(() => {});
+        vibratePhone();
+    }
+
+    // Sequence of prank
+    setTimeout(() => {
+        document.getElementById('main').style.display = 'none';
+        document.getElementById('alert').style.display = 'block';
+        playScare();
+    }, 5000);
+
+    setTimeout(() => {
+        document.getElementById('alert').style.display = 'none';
+        document.getElementById('final').style.display = 'block';
+    }, 8000);
+
+    // Auto-restart prank
+    function restartPrank() {
+        location.reload();
+    }
+</script>
+
+</body>
+</html>

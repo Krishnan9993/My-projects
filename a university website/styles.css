@@ -1,0 +1,213 @@
+:root {
+  --primary: #163172;
+  --accent: #f8c630;
+  --light-bg: #f4f8fc;
+  --text: #222;
+  --white: #fff;
+  --gray: #5c6b7d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--light-bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Header and Nav */
+header {
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.7rem 0;
+  box-shadow: 0 2px 4px rgba(22,49,114,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(90deg, #163172 70%, #4f61a1 100%);
+  color: var(--white);
+  padding: 4rem 0 3rem 0;
+  text-align: center;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  color: #e6ebf3;
+}
+.btn {
+  background: var(--accent);
+  color: var(--primary);
+  padding: 0.7rem 1.8rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.btn:hover {
+  background: #ffd85c;
+  color: #163172;
+}
+
+/* Section Headings */
+section h2 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* About */
+.about-section {
+  background: var(--white);
+  padding: 2.8rem 0;
+}
+.about-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--gray);
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+/* Departments */
+.departments-section {
+  background: var(--light-bg);
+  padding: 2.8rem 0 2rem 0;
+}
+.departments-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.dep-card {
+  background: var(--white);
+  padding: 1.4rem 1rem 1rem 1rem;
+  border-radius: 9px;
+  box-shadow: 0 2px 8px rgba(18,46,108,0.06);
+  text-align: center;
+}
+.dep-card h3 {
+  margin-bottom: 0.7rem;
+  color: var(--primary);
+  font-size: 1.15rem;
+}
+
+/* Admissions */
+.admissions-section {
+  background: #e8f0fa;
+  padding: 2.5rem 0;
+  text-align: center;
+}
+.admissions-content ul {
+  list-style: disc;
+  margin: 1rem auto 1.5rem;
+  max-width: 350px;
+  text-align: left;
+  color: var(--gray);
+}
+
+/* Contact */
+.contact-section {
+  background: var(--white);
+  color: var(--text);
+  padding: 2rem 0;
+  text-align: center;
+}
+.contact-content p {
+  margin: 0.3rem 0;
+  color: var(--gray);
+}
+
+/* Footer */
+footer {
+  background: var(--primary);
+  color: var(--white);
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .departments-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .nav-links {
+    gap: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .departments-grid {
+    grid-template-columns: 1fr;
+  }
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
+  .hero-content h1 {
+    font-size: 1.4rem;
+  }
+  section h2 {
+    font-size: 1.3rem;
+  }
+  .admissions-content ul {
+    padding-left: 1.1rem;
+  }
+}
